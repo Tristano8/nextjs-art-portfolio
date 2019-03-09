@@ -35,7 +35,7 @@ class ContactForm extends React.Component {
 
     render() {
         const { classes } = this.props
-        return(
+        return (
         <form>
             <TextField 
                 label='Name'
@@ -53,10 +53,11 @@ class ContactForm extends React.Component {
                 onChange={this.handleChange('email')}
             />
             <br/>
+            <br/>
             <TextField
                 label='Message'
                 multiline
-                rows="5"
+                rows="6"
                 value={this.state.message}
                 placeholder='Your Message'
                 margin='normal'
