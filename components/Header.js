@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import AppBar from '@material-ui/core/AppBar'
-import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 import Home from '@material-ui/icons/Home'
@@ -8,15 +7,13 @@ import { withStyles } from '@material-ui/core/styles'
 
 const styles = theme => ({
     appBar: {
-        marginBottom: theme.spacing.unit * 4
-    },
-
-    navTab: {
+        marginBottom: theme.spacing.unit * 4,
         display: 'flex',
-        justifyContent: 'center',
+
     },
     
     hover: {
+        paddingLeft: theme.spacing.unit * 2,
         '&:hover': {
             opacity: 0.5
         } 
@@ -38,7 +35,7 @@ const styles = theme => ({
 const Header = props => { 
     const { classes } = props
     return (
-        <AppBar position="static" className={classes.appBar}>
+        <AppBar position="static" align="center" className={classes.appBar}>
             <div className={classes.navTab}>
             <Tab className={classes.hover} label={ 
                     <Link href="/">
